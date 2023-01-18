@@ -1,0 +1,81 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                    vase_03.jpg  label:                       vase
+ 2 key:                  jackal_02.jpg  label:                     jackal
+ 3 key:        golden_retriever_01.jpg  label:           golden retriever
+ 4 key:        golden_retriever_04.jpg  label:           golden retriever
+
+     MATCH:
+
+                   vase_03.jpg: 
+Real:                       vase   Classifier:                           vase
+
+       golden_retriever_01.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
+
+ NOT A MATCH:
+
+                 jackal_02.jpg: 
+Real:                     jackal   Classifier: coyote, prairie wolf, brush wolf, canis latrans
+
+       golden_retriever_04.jpg: 
+Real:           golden retriever   Classifier:                     pomeranian
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+                   vase_03.jpg: 
+Real:                       vase   Classifier:                           vase  
+PetLabelDog: 0  ClassLabelDog: 0
+
+       golden_retriever_01.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                 jackal_02.jpg: 
+Real:                     jackal   Classifier: coyote, prairie wolf, brush wolf, canis latrans  
+PetLabelDog: 0  ClassLabelDog: 0
+
+       golden_retriever_04.jpg: 
+Real:           golden retriever   Classifier:                     pomeranian  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:  50.0
+
+
+**Model:  resnet **
+Number of Images:  4
+Number of Dog Images:  2
+Number of "Not-a" Dog Images:  2
+
+Percentage Calculations:
+% Correct Dogs:  100.0
+% Correct Breed:  50.0
+% Correct "Not-a" Dog:  100.0
+% Match:  50.0
+
+No Misclassification of dogs
+
+Misclassification of breed of dogs:
+Pet Image Label:  golden retriever
+Classifier Label:  pomeranian
+
+Total dog breed misclassifications:  1
+
+** Total Elapsed Runtime: 0:0:1
